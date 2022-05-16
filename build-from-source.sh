@@ -50,7 +50,7 @@ cd revanced-patcher
 git checkout dev
 chmod +x ./gradlew
 
-./gradlew publish
+./gradlew publishToMavenLocal
 RETURN_CODE="$?"
 
 if [ ! $RETURN_CODE == 0 ]; then
@@ -66,7 +66,7 @@ cd revanced-patches
 git checkout dev
 chmod +x ./gradlew
 
-./gradlew publish
+./gradlew publishToMavenLocal
 RETURN_CODE="$?"
 
 if [ ! $RETURN_CODE == 0 ]; then
