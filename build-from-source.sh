@@ -95,8 +95,8 @@ fi
 cd ..
 
 echo
-git clone https://github.com/revanced/revanced-cli
-cd revanced-cli
+git clone https://github.com/ebfork/revanced-cli-simple
+cd revanced-cli-simple
 git checkout main
 REMOVE="if (clean) outputFile.delete()"
 sed -i "/$REMOVE/d" src/main/kotlin/app/revanced/cli/MainCommand.kt
