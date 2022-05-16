@@ -141,7 +141,7 @@ else
 fi
 
 cp "$DIR/build/revanced.apk" "$DIR/revanced.apk"
-cp "$DIR/build/revanced-cli-simple.jar" "$DIR/revanced-clis.jar"
+cp "$DIR/build/revanced-clis.jar" "$DIR/revanced-clis.jar"
 
 
 exit 0
