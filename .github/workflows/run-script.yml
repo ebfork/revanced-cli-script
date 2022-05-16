@@ -32,6 +32,8 @@ jobs:
       
       # Run script
       - name: Execute script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           chmod +x ./build-from-source.sh
           ./build-from-source.sh
