@@ -77,7 +77,7 @@ fi
 cd ..
 
 echo
-git clone https://github.com/ebfork/revanced-cli
+git clone https://github.com/revanced/revanced-cli
 cd revanced-cli
 git checkout dev
 REMOVE="if (clean) outputFile.delete()"
