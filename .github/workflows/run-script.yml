@@ -43,4 +43,4 @@ jobs:
           name: vanced
           path: |
             revanced.apk
-            revanced-cli.jar
+            revanced-clis.jar
