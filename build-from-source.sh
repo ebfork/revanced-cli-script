@@ -95,6 +95,24 @@ fi
 cd ..
 
 echo
+git clone https://github.com/revanced/revanced-cli
+cd revanced-cli
+git checkout main
+REMOVE="if (clean) outputFile.delete()"
+sed -i "/$REMOVE/d" src/main/kotlin/app/revanced/cli/MainCommand.kt
+chmod +x ./gradlew
+
+./gradlew build
+RETURN_CODE="$?"
+
+if [ ! $RETURN_CODE == 0 ]; then
+	echo Build failed
+	exit 1
+fi
+
+cd ..
+
+echo
 git clone https://github.com/revanced/revanced-integrations
 cd revanced-integrations
 chmod +x ./gradlew.sh
@@ -123,7 +141,7 @@ else
 fi
 
 cp "$DIR/build/revanced.apk" "$DIR/revanced.apk"
-cp "$DIR/build/revanced-cli.jar" "$DIR/revanced-cli.jar"
+cp "$DIR/build/revanced-cli-simple.jar" "$DIR/revanced-cli-simple.jar"
 
 
 exit 0
