@@ -123,5 +123,7 @@ else
 fi
 
 cp "$DIR/build/revanced.apk" "$DIR/revanced.apk"
+cp "$DIR/build/revanced-cli.jar" "$DIR/revanced-cli.jar"
+
 
 exit 0
