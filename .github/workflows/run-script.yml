@@ -32,9 +32,12 @@ jobs:
       
       # Run script
       - name: Execute script
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          wget "https://github.com/CnC-Robert/revanced-cli-script/raw/main/build-revanced"
           chmod +x ./build-revanced
           ./build-revanced
+      - name: Upload result
+        uses: actions/upload-artifact@v3
+        with:
+          name: vanced
+          path: |
+            revanced.apk
